@@ -1,0 +1,6 @@
+INFO:root:hello, info
+INFO:root:finsh, info
+2022-07-29 10:17:42,956 - DEBUG: This is logging  DEBUG test 
+2022-07-29 10:17:42,956 - INFO: This is logging INFO test 
+2022-07-29 10:17:42,956 - WARNING: This is logging  WARN test 
+2022-07-29 10:17:42,956 - ERROR: This is logging  ERROR test 
