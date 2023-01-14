@@ -18,7 +18,6 @@ def B_moon(V,Z,K = 0.172,Bzen = 79):
     B0 = Bzen * 10 ** (-0.4 * K * (X - 1)) * K
     return B - B0
 
-
 # import ephem
 # import numpy as np
 # from astro import angular_separation

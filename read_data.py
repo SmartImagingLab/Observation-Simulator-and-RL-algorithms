@@ -28,7 +28,6 @@ def judge_Input(line: str, modify: str, initial: str or list):
     else:
         pass
 
-
 def get_modify_location(line: str, initial: str or list):
     if type(initial) == list:
         return initial[0], initial[1]
@@ -36,7 +35,6 @@ def get_modify_location(line: str, initial: str or list):
         return line.find(initial), line.find(initial) + len(initial)
     else:
         raise TypeError("Input输入格式不合法")
-
 
 def modify_tle(line: str, modify: str, start: int, end: int = None):
     line_list = list(line)
@@ -46,7 +44,6 @@ def modify_tle(line: str, modify: str, start: int, end: int = None):
         line_list[start] = str(modify)
     line_new = ''.join(line_list)
     return line_new
-
 
 def cal_check_num(line: str):
     line_list = list(line)
@@ -99,9 +96,6 @@ def modify_nums(nums, s,the_range):
     elif n2 < n1:
         return str(new_nums).zfill(n1)
     else:pass
-
-
-
 
 
 '''
