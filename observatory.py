@@ -27,18 +27,13 @@ telescope_list = [
                    {'signal': 5, 'caliber': 1, 'field': 3},
                    {'signal': 6, 'caliber': 1, 'field': 3},
                   ]
-
 "记得把时间转换和角度转换写好"
-
 class Observatory:
     def __init__(self, name, Longitude, Latitude, Elevation, telescope_list, Cloud_Cover,
                  is_observation,is_seeing,is_cal_value):
-
         self.name,self.Longitude,self.Latitude,self.Elevation = name, Longitude, Latitude, Elevation  # 台址信息
-
         self.Cloud_Cover,self.is_observation,self.is_seeing,self.is_cal_value \
             = Cloud_Cover,is_observation,is_seeing,is_cal_value
-
         if self.Cloud_Cover is True:
             paramcube = np.array([(0.2, 40, 0, 7600),
                                   (0.2, 5.7, 320, 16000),
