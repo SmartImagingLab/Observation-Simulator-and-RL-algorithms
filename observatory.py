@@ -57,19 +57,15 @@ class Observatory:
         self.telescope_list = telescope_list
         # self.telescopes = len(telescope_list) ? 1:0
         self.telescopes = list(map(self.create_telescope,telescope_list))  # 根据望远镜参数生成望远镜阵列对象
-
     def __repr__(self):
         return "{__class__.__name__}({name!r},{Longitude!r},{Latitude!r},{Elevation!r},{_telescopes!r})"\
             .format(__class__=self.__class__,_telescopes=",".join(map(repr, self.telescope_list)),**self.__dict__)
-
     def __str__(self):
         return "{__class__.__name__}({name!r},{Longitude!r},{Latitude!r},{Elevation!r})"\
             .format(__class__=self.__class__,**self.__dict__)
-
     def __eq__(self, other):
         return self.name == other.name and self.Longitude == other.Longitude and self.Latitude == other.Latitude and \
                 self.Elevation == other.Elevation
-
     def reset(self):
         '''
         将对象所有属性重新设置为初始状态
@@ -127,7 +123,6 @@ class Observatory:
         '''
         telescope_I = telescope(dict['signal'], dict['caliber'], dict['field'], control = dict['control'])
         return telescope_I
-
 
     def solar_altitude(self):
         '''
